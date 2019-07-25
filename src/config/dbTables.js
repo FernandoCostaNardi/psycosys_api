@@ -5,8 +5,9 @@ const sql_criar_tabela_patients =
   "id int NOT NULL, \n" +
   "nome VARCHAR(150) NOT NULL, \n" +
   "telefone VARCHAR(13) NOT NULL, \n" +
+  "email VARCHAR(60), \n" +
   "status VARCHAR(45) NOT NULL, \n" +
-  "valor DECIMAL(2) NOT NULL, \n" +
+  "valor DECIMAL(10,2) NOT NULL, \n" +
   "PRIMARY KEY (`id`), \n" +
   "UNIQUE INDEX id_UNIQUE (id ASC) \n" +
   ");";

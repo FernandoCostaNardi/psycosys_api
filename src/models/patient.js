@@ -13,3 +13,13 @@ module.exports = class Product {
 module.exports.fetchAll = () => {
   return db.execute("SELECT * FROM Patients");
 };
+
+module.exports.findOne = (req, res) => {
+  return db.execute(
+    "SELECT * FROM Patients WHERE nome like'%" + req.params.nome + "%'"
+  );
+};
+
+module.exports.delete = (req, res) => {
+  return db.execute("DELETE FROM Patients WHERE id=" + req.params.id);
+};
